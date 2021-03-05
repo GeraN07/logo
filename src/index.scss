@@ -1,0 +1,22 @@
+@import "./components/page-header/page-header.scss";
+@import "./pages/logo.scss";
+
+@font-face {
+    font-family: Arvo-Regular;
+    src: url("../src/assets/fonts/Arvo.woff2") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Gost-B;
+    src: url("../src/assets/fonts/GOST-2304-81typeB.woff") format("truetype");
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    outline: none;
+}

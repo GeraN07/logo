@@ -1,0 +1,223 @@
+.page-header {
+    width: 100%;
+    border-bottom: 6.61px solid #f00;
+    box-sizing: border-box;
+}
+
+.page-header__wrapper {
+    max-width: 1440px;
+    padding-left: 146px;
+    padding-right: 38px;
+    display: flex;
+    max-height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-header__burger-button {
+    display: none;
+}
+
+.page-header__logo-block {
+    width: 206px;
+    height: 62px;
+    background-image: url("./assets/svg/logo.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    margin-top: 33px;
+    margin-bottom: 33px;
+    margin-left: 5px;
+}
+
+.page-header__navbar-block {
+    width: 415px;
+    height: 21px;
+    margin-top: 64px;
+    margin-bottom: 43px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 249px;
+}
+
+.page-header__navbar-block button {
+    border-radius: 10px;
+    height: 19.84px;
+    font-family: Arvo-Regular, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #fff;
+    color: #8b8b8b;
+    border: none;
+    box-shadow: 0 0 2px #000;
+}
+
+.page-header__button-price {
+    width: 123.95px;
+    padding-bottom: 5px;
+}
+
+.page-header__button-kp {
+    width: 122.57px;
+}
+
+.page-header__button-description {
+    width: 122.53px;
+}
+
+.page-header__button-price.active,
+.page-header__button-kp.active,
+.page-header__button-description.active {
+    background: #cbcbcb;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: #000;
+}
+
+.page-header__contacts-block {
+    width: 219px;
+    height: 87.47px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-bottom: 16.53px;
+    margin-left: 252px;
+}
+
+.page-header__phone-number,
+.page-header__email-address {
+    font-family: Arvo-Regular, sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    line-height: 17.29px;
+}
+
+.page-header__work-time {
+    font-family: Arvo-Regular, sans-serif;
+    font-size: 14px;
+    line-height: 22.23px;
+}
+
+.page-header__phone-number::before {
+    content: url("./assets/svg/phone.svg");
+    width: 25.44px;
+    height: 25.59px;
+    margin-right: 6.85px;
+    position: relative;
+    top: 6px;
+}
+
+.page-header__email-address::before {
+    content: url("./assets/svg/email.svg");
+    width: 26.04px;
+    height: 26.19px;
+    margin-right: 5.96px;
+    position: relative;
+    top: 7px;
+}
+
+.page-header__work-time::before {
+    content: url("./assets/svg/clock.svg");
+    width: 26.02px;
+    height: 26.72px;
+    margin-right: 6.27px;
+    position: relative;
+    top: 5px;
+}
+
+@media (max-width: 1320px) {
+    .page-header__navbar-block,
+    .page-header__contacts-block {
+        margin-left: auto;
+    }
+
+    .page-header__wrapper {
+        justify-content: space-between;
+    }
+
+    .page-header {
+        width: 1440px;
+        border-bottom: 6.61px solid #f00;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 425px) {
+    .page-header {
+        width: 100%;
+        height: auto;
+    }
+
+    .page-header__navbar-block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 0;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        transition: 0.5s ease-in;
+    }
+
+    .page-header__navbar-block.active {
+        transition: 0.5s ease-out;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .page-header__navbar-block button {
+        width: 0;
+        border-radius: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .page-header__navbar-block.active button {
+        opacity: 1;
+        visibility: visible;
+        height: 40px;
+        width: auto;
+        transition: 0.5s ease-out;
+    }
+
+    .page-header__contacts-block {
+        display: none;
+    }
+
+    .page-header__burger-button {
+        display: block;
+        width: 46px;
+        height: 30px;
+        margin-top: 27px;
+        margin-right: 24px;
+        margin-bottom: 28px;
+        background-image: url('./assets/svg/nav.svg');
+        transition: 0.5s ease-in;
+    }
+
+    .page-header__burger-button.active {
+        transform: rotate(90deg);
+        transition: 0.5s ease-in;
+    }
+
+    .page-header__logo-block {
+        width: 137px;
+        height: 38px;
+        background-size: contain;
+        margin-left: 20px;
+        margin-top: 22px;
+        margin-bottom: 25px;
+    }
+
+    .page-header__wrapper {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: inherit;
+        height: 100%;
+    }
+}

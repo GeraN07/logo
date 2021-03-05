@@ -1,0 +1,1 @@
+require("../src/pages/logo.js")
